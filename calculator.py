@@ -5,7 +5,7 @@ if os.name =='nt':
     ctypes.windll.kernel32.SetConsoleTitleW(f"WHY DID I MAKE A CALCULATOR?")
 
 signs = ['Add', 'Subtract', 'Multiply', 'Divide']
-symbol = (input("How do you want to combine your numbers?\n"))
+symbol = (input("How do you want to combine your numbers?\n(Add, Subtract, Multiply, Divide) "))
 sign, output = "0", "0"
 
 if symbol not in signs:
