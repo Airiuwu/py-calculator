@@ -13,8 +13,8 @@ if symbol not in signs:
     exit()
 
 else:
-    first = int(input(f"What is the first number you would like to {symbol}?\n"))
-    second = int(input("And the second one?\n"))
+    first = int(input(f"What is the first number you would like to {symbol}? "))
+    second = int(input("And the second one? "))
 
 if symbol == "Add":
     output = first + second
@@ -32,7 +32,4 @@ elif symbol == "Divide":
     output = first / second
     sign = "/"
 
-else:
-    print("wtf are you doing, you think that this program is that complex to understand what you just put there?\n")
-
-print(f"Your answer is: {first} {sign} {second} = {output}\n")
+print(f"Your answer is: {first} {sign} {second} = {output}")
