@@ -32,4 +32,4 @@ elif symbol == "Divide":
     output = first / second
     sign = "/"
 
-print(f"Your answer is: {first} {sign} {second} = {output}")
+print(f"{first} {sign} {second} = {output}")
