@@ -1,35 +1,31 @@
 import os, ctypes
 
 if os.name =='nt':
-    os.system('cls')
-    ctypes.windll.kernel32.SetConsoleTitleW(f"WHY DID I MAKE A CALCULATOR?")
+	os.system('cls')
+	ctypes.windll.kernel32.SetConsoleTitleW(f"WHY DID I MAKE A CALCULATOR?")
 
-signs = ['Add', 'Subtract', 'Multiply', 'Divide']
-symbol = (input("How do you want to combine your numbers?\n(Add, Subtract, Multiply, Divide) "))
-sign, output = "0", "0"
+signs = ['+', '-', '*', '/']
+symbol = (input("What operator are you using today? ( +, -, *, / ) "))
+output = "0"
 
 if symbol not in signs:
-    print("That is not a valid choice.")
-    exit()
+	print("That is not a valid choice.")
+	exit()
 
 else:
-    first = int(input(f"What is the first number you would like to {symbol}? "))
-    second = int(input("And the second one? "))
+	first = int(input(f" _ {symbol} _ = _ "))
+	second = int(input(f"{first} {symbol} _ = _ "))
 
-if symbol == "Add":
-    output = first + second
-    sign = "+"
+if symbol == "+":
+	output = first + second
 
-elif symbol == "Subtract":
-    output = first - second
-    sign = "-"
+elif symbol == "-":
+	output = first - second
 
-elif symbol == "Multiply":
-    output = first * second
-    sign = "*"
+elif symbol == "*":
+	output = first * second
 
-elif symbol == "Divide":
-    output = first / second
-    sign = "/"
-
-print(f"{first} {sign} {second} = {output}")
+elif symbol == "/":
+	output = first / second
+ 
+print(f"{first} {symbol} {second} = {output}")
